@@ -33,8 +33,8 @@ def main():
     train_data, test_data = train_test_split(raw_data, test_size=1/4, random_state=10)
 
     # 标签
-    y_train = train_data['Label'].values
-    y_test = test_data['Label'].values
+    y_train = train_data[config.label_col].values
+    y_test = test_data[config.label_col].values
 
     # 数据查看
     utils.inspect_dataset(train_data, test_data)
